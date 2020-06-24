@@ -1,0 +1,301 @@
+<div class="container">
+
+
+    <h1 class="mat-display-1">Botones</h1>
+
+    <p>
+        Los botones comunican acciones que los usuarios pueden realizar. Por lo general, se colocan en toda su interfaz
+        de usuario, en lugares como:
+
+    </p>
+    <ul>
+        <li>Cuadros de diálogo</li>
+        <li>Ventanas modales</li>
+        <li>Formularios</li>
+        <li>Tarjetas</li>
+        <li>Barras de herramientas</li>
+    </ul>
+    <p>Consulte la guía de recomendaciones de uso de Material Design en el siguiente <a
+           href="https://material.io/components/buttons"
+           target="_blank"
+           rel="noopener noreferrer">enlace.</a></p>
+
+    <div class="d-flex justify-content-between border p-5 mb-5 shadow-sm">
+
+        <button mat-raised-button
+                color="primary">mat-raised-button</button>
+        <button mat-flat-button
+                color="accent">mat-flat-button</button>
+        <button mat-stroked-button
+                color="warn">mat-stroked-button</button>
+        <button mat-button>mat-button</button>
+
+    </div>
+
+    <h2>Tipos de botones que podemos usar con Material</h2>
+
+    <mat-accordion multi="true">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Botones de Contenido<code class="ml-2">[mat-raised-button]</code><span class="ml-2"><em>Énfasis
+                            Alto</em></span>
+                </mat-panel-title>
+
+            </mat-expansion-panel-header>
+            <p class="text-muted"> Los botones de contenido son de alto énfasis, se distinguen por su uso de
+                elevación y relleno.
+                Suele usarse para
+                acciones que son primarias en la aplicación o que hay que destacar por especial interés.</p>
+            <div class="d-flex justify-content-between border p-5 mb-5 shadow-sm">
+
+                <button mat-raised-button>Basic</button>
+                <button mat-raised-button
+                        color="primary">Primary</button>
+                <button mat-raised-button
+                        color="accent">Accent</button>
+                <button mat-raised-button
+                        color="warn">Warn</button>
+                <button mat-raised-button
+                        disabled>Disabled</button>
+                <a mat-raised-button
+                   routerLink=".">Link</a>
+            </div>
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Botones de Contenido Sin Elevación<code class="ml-2">[mat-flat-button]</code><span
+                          class="ml-2"><em>Énfasis Alto</em></span>
+                </mat-panel-title>
+
+            </mat-expansion-panel-header>
+
+            <p class="text-muted"> Tienen la misma funcionalidad que los botones de Contenido con elevación (Raised)
+                pero en el que se elimina el
+                efecto de elevación del botón al pulsarlo.</p>
+            <div class="d-flex justify-content-between border p-5 mb-5 shadow-sm">
+
+                <button mat-flat-button>Basic</button>
+                <button mat-flat-button
+                        color="primary">Primary</button>
+                <button mat-flat-button
+                        color="accent">Accent</button>
+                <button mat-flat-button
+                        color="warn">Warn</button>
+                <button mat-flat-button
+                        disabled>Disabled</button>
+                <a mat-flat-button
+                   routerLink=".">Link</a>
+            </div>
+        </mat-expansion-panel>
+
+        <!--         <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="text-muted">Lorem.</p>
+        </mat-expansion-panel> -->
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Botones con Contorno<code class="ml-2">[mat-stroked-button]</code><span class="ml-2"><em>Énfasis
+                            Medio</em></span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="text-muted">Los botones contorneados son botones de énfasis medio. Contienen acciones que son
+                importantes, pero no son la
+                acción principal en una aplicación.
+
+                Los botones contorneados también son una alternativa de menor énfasis a los botones contenidos, o una
+                alternativa de mayor énfasis a los botones de texto.</p>
+            <div class="d-flex justify-content-between border p-5 mb-5 shadow-sm">
+
+                <button mat-stroked-button>Basic</button>
+                <button mat-stroked-button
+                        color="primary">Primary</button>
+                <button mat-stroked-button
+                        color="accent">Accent</button>
+                <button mat-stroked-button
+                        color="warn">Warn</button>
+                <button mat-stroked-button
+                        disabled>Disabled</button>
+                <a mat-stroked-button
+                   routerLink=".">Link</a>
+            </div>
+
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Botones de Texto<code class="ml-2">[mat-button]</code><span class="ml-2"><em>Énfasis
+                            Bajo</em></span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="text-muted">
+                <p>Los botones de texto generalmente se usan para acciones menos pronunciadas. Normalmente será útil
+                    utilizarlas:
+                </p>
+                <ul>
+                    <li>En diálogos</li>
+                    <li>En tarjetas. En este caso, los botones de texto ayudan a mantener el énfasis en el contenido de
+                        la misma.
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex justify-content-between border p-5 mb-5 shadow-sm">
+
+                <button mat-button>Basic</button>
+                <button mat-button
+                        color="primary">Primary</button>
+                <button mat-button
+                        color="accent">Accent</button>
+                <button mat-button
+                        color="warn">Warn</button>
+                <button mat-button
+                        disabled>Disabled</button>
+                <a mat-button
+                   routerLink=".">Link</a>
+            </div>
+        </mat-expansion-panel>
+
+
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Botones con iconos y etiquetas <code class="ml-2"></code>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="text-muted">
+                <p>A veces es posible que desee tener iconos para ciertos botones para mejorar la experiencia de usuario
+                    de la aplicación, ya que reconocemos los logotipos más fácilmente que el texto sin formato. Por
+                    ejemplo, si tiene un botón Eliminar, puede etiquetarlo con un icono de cubo de basura.
+                </p>
+            </div>
+            <div class="d-flex justify-content-between border p-5 mb-5 shadow-sm">
+                <button mat-raised-button
+                        color="primary"
+                        aria-label="Guardar">
+                    <mat-icon>add</mat-icon>
+                    NUEVO
+                </button>
+                <button mat-flat-button
+                        color="warn"
+                        aria-label="Eliminar">
+                    <mat-icon>delete</mat-icon>
+                    ELIMINAR
+                </button>
+                <button mat-stroked-button
+                        color="accent"
+                        aria-label="Example icon-button with a heart icon">
+                    <mat-icon>cancel</mat-icon>
+                    CANCELAR
+                </button>
+                <button mat-button
+                        color="warn">
+                    <mat-icon>check</mat-icon>
+                    ACEPTAR
+                </button>
+                <button mat-button
+                        disabled
+                        aria-label="Example icon-button with a heart icon">
+                    <mat-icon>fullscreen</mat-icon>
+                    PANTALLA COMPLETA
+                </button>
+            </div>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Botones de Iconos<code class="ml-2">[mat-icon-button]</code><span class="ml-2"></span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="text-muted">
+                <p>Los botones de iconos suelen encontrarse en las barras de aplicaciones y las barras de herramientas.
+
+                    Los iconos son también apropiados para botones toggle que permiten marcar o desmarcar una sola
+                    opción, tal como poner o quitar una estrella de un elemento.
+                </p>
+                <p>El uso del componente es interesante el uso del atributo <code>matToolTip</code> para indicar la
+                    ayuda del mismo.
+
+                </p>
+            </div>
+            <div class="d-flex justify-content-between border p-5 mb-5 shadow-sm">
+                <button mat-icon-button
+                        matTooltip="útil para desplegar un menú contextual">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <button mat-icon-button
+                        color="primary"
+                        matTooltip="Configuración">
+                    <mat-icon>settings</mat-icon>
+
+                </button>
+                <button mat-icon-button
+                        color="accent"
+                        matTooltip="Cierre de Modales o de sidenav auxiliares"
+                        aria-label="Example icon-button with a heart icon">
+                    <mat-icon>close</mat-icon>
+                </button>
+                <button mat-icon-button
+                        matTooltip="I love Material Design"
+                        color="warn">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+            </div>
+        </mat-expansion-panel>
+
+
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Botones de Flotantes Circulares<code class="ml-2">[mat-fab] [mat-mini-fab]</code><span
+                          class="ml-2"></span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="text-muted">
+                <p>Un <a href="http:///material.io/components/buttons-floating-action-button"
+                       target="_blank"
+                       rel="noopener noreferrer">botón de acción flotante (FAB)</a> realiza la acción primaria o más
+                    común en una pantalla.
+                    Aparece delante de todo el contenido de la pantalla, generalmente como una forma circular con un
+                    icono en el centro. Se recomienda no usar más de un FAB en una misma pantalla.</p>
+                <p>
+                    Solo use un FAB si es la forma más adecuada de presentar la acción principal de una pantalla.</p>
+            </div>
+            <div class="d-flex justify-content-between border p-5 mb-5 shadow-sm">
+                <button mat-mini-fab
+                        color="accent">
+                    <mat-icon>add</mat-icon>
+                </button>
+
+                <button mat-fab
+                        color="primary">
+                    <mat-icon>photo_camera</mat-icon>
+                </button>
+
+                <button mat-mini-fab
+                        color="warn">
+                    <mat-icon>email</mat-icon>
+                </button>
+
+
+            </div>
+        </mat-expansion-panel>
+
+    </mat-accordion>
+
+
+
+</div>

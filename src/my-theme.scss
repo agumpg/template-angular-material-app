@@ -22,3 +22,8 @@ $my-dark-theme: mat-dark-theme($my-primary, $my-accent, $my-warn);
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($my-theme);
+
+.mat-nav-list a.active {
+  /* background: mat-color($my-accent); */
+  color: mat-color($my-warn);
+}

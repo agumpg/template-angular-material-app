@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MaterialModule } from '../material.module';
 import { InfoComponent } from './info/info.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule( {
     declarations: [
@@ -12,7 +13,8 @@ import { InfoComponent } from './info/info.component';
     ],
     imports: [
         CommonModule,
-        MaterialModule
+        MaterialModule,
+        AppRoutingModule
     ],
     exports: [
         NavigationComponent

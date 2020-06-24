@@ -1,0 +1,165 @@
+<!-- ===================================================== -->
+<!-- TOOLBAR SUPERIOR                                      -->
+<!-- ===================================================== -->
+<div class="row">
+  <div class="col-12">
+    <mat-toolbar color="primary">
+
+      <!-- ===================================================== -->
+      <!-- TOOLBAR: Parte Izquierda - botón, logo y nombre App   -->
+      <!-- ===================================================== -->
+      <!-- Botón tipo hamburguesa para el Toggle() del menú -->
+      <button type="button"
+              aria-label="Toggle sidenav"
+              mat-icon-button
+              (click)="sidenav_menu_left.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <!-- Logotipo de Aplicación -->
+      <img src="/assets/img/app_logo.png"
+           class="logo ml-2"
+           alt="Logotipo Aplicación">
+
+      <!-- Titulo de Aplicación -->
+      <span class="lead ml-2">{{ appTitle }}</span>
+
+      <!-- Aplicación de clase flex para rellenar espacio y alinear a la derecha -->
+      <span class="fill-remaining-space"></span>
+
+      <!-- ===================================================== -->
+      <!-- TOOLBAR: Parte Derecha - Menú y botones               -->
+      <!-- ===================================================== -->
+      <!-- Menú desplegable -->
+      <mat-menu #appMenu="matMenu">
+        <ng-template matMenuContent>
+          <button mat-menu-item>Ajustes</button>
+          <button mat-menu-item
+                  (click)="openDialogInfo()">Acerca de...</button>
+        </ng-template>
+      </mat-menu>
+      <button mat-icon-button
+              [matMenuTriggerFor]="appMenu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <!-- Botón Acerca de... -->
+      <span>
+        <button mat-icon-button
+                matTooltip="Acerca de..."
+                (click)="openDialogInfo()">
+          <mat-icon>error_outline</mat-icon>
+        </button>
+      </span>
+      <!-- Botón Configuración -->
+      <span>
+        <button mat-icon-button
+                matTooltip="Menú de configuración"
+                (click)="sidenav_menu_right.toggle()">
+          <mat-icon>settings</mat-icon>
+        </button>
+      </span>
+    </mat-toolbar>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-12">
+    <mat-sidenav-container class="sidenav-container">
+      <!-- ===================================================== -->
+      <!-- SIDENAV: MENÚ IZQUIERDO                               -->
+      <!-- ===================================================== -->
+      <mat-sidenav #sidenav_menu_left
+                   class="sidenav shadow"
+                   fixedInViewport=false
+                   [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+                   [mode]="(isHandset$ | async) ? 'over' : 'side'"
+                   [opened]="(isHandset$ | async) === false">
+
+        <!-- <mat-toolbar color="accent">
+          <mat-toolbar-row>
+            <span class="lead">Menú de Opciones</span>
+          </mat-toolbar-row>
+        </mat-toolbar> -->
+
+        <!-- ===================================================== -->
+        <!-- SIDENAV: Izquierdo - Opciones de Menús                -->
+        <!-- ===================================================== -->
+        <mat-nav-list>
+          <a mat-list-item
+             href="#">
+            <mat-icon matListIcon>looks_one</mat-icon>
+            <p matLine>Enlace 1</p>
+          </a>
+          <a mat-list-item
+             href="#">
+            <mat-icon matListIcon>looks_two</mat-icon>
+            <p matLine>Enlace 2</p>
+          </a>
+          <a mat-list-item
+             href="#">
+            <mat-icon matListIcon>looks_3</mat-icon>
+            <p matLine>Enlace 3</p>
+          </a>
+        </mat-nav-list>
+      </mat-sidenav>
+
+
+      <!-- ===================================================== -->
+      <!-- SIDENAV: MENÚ DERECHO                                  -->
+      <!-- ===================================================== -->
+      <mat-sidenav #sidenav_menu_right
+                   class="sidenav shadow"
+                   fixedInViewport=false
+                   position="end"
+                   mode="side"
+                   opened="false">
+        <mat-list>
+          <!-- Botón de Cierre -->
+          <div class="text-right mb-2">
+            <button mat-icon-button
+                    aria-label="Cerrar menú derecho"
+                    (click)="sidenav_menu_right.toggle()">
+              <mat-icon>close</mat-icon>
+            </button>
+          </div>
+          <mat-divider></mat-divider>
+
+          <!-- Ejemplo opciones de Configuración -->
+          <mat-list-item class="mt-4">
+            <h3>Grupo 1</h3>
+          </mat-list-item>
+          <mat-list-item>
+            <mat-slide-toggle ngModel
+                              checked="true"
+                              color="primary"
+                              class="mat-caption"
+                              name="config_B">Configuración A</mat-slide-toggle>
+
+          </mat-list-item>
+          <mat-list-item>
+            <mat-slide-toggle ngModel
+                              class="mat-caption"
+                              name="config_A"
+                              required>Configuración B</mat-slide-toggle>
+          </mat-list-item>
+        </mat-list>
+      </mat-sidenav><!-- ./SIDENAV: MENÚ DERECHO -->
+
+
+
+      <!-- ===================================================== -->
+      <!-- CONTENIDO PRINCIPAL                                   -->
+      <!-- ===================================================== -->
+      <mat-sidenav-content>
+        <div class="container-fluid animate__animated animate__fadeIn mt-3">
+          <div class="row">
+            <div class="col-12">
+              <!-- Renderizamos el contenido para que se agregue desde el componente padre -->
+              <ng-content></ng-content>
+            </div>
+          </div>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</div>

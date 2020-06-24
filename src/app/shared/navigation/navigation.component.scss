@@ -1,0 +1,24 @@
+.fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+.sidenav-container {
+  display: block;
+  height: 100vh;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.mat-toolbar .mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  max-height: 40px;
+}

@@ -10,9 +10,9 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 
-$my-primary: mat-palette($mat-indigo, 900);
-$my-accent: mat-palette($mat-blue-gray, 100);
-$my-warn: mat-palette($mat-pink, A200);
+$my-primary: mat-palette($mat-cemi, 900);
+$my-accent: mat-palette($mat-green-cemi, 500);
+$my-warn: mat-palette($mat-red, 500);
 
 // Create the theme object (a Sass map containing all of the palettes).
 $my-theme: mat-light-theme($my-primary, $my-accent, $my-warn);
@@ -25,5 +25,5 @@ $my-dark-theme: mat-dark-theme($my-primary, $my-accent, $my-warn);
 
 .mat-nav-list a.active {
   /* background: mat-color($my-accent); */
-  color: mat-color($my-warn);
+  color: mat-color($my-accent);
 }

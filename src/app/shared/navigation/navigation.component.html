@@ -21,7 +21,7 @@
            alt="Logotipo Aplicación">
 
       <!-- Titulo de Aplicación -->
-      <span class="lead ml-2">{{ appTitle }}</span>
+      <span class="lead ml-2 pt-1">{{ appTitle }}</span>
 
       <!-- Aplicación de clase flex para rellenar espacio y alinear a la derecha -->
       <span class="fill-remaining-space"></span>
@@ -29,18 +29,6 @@
       <!-- ===================================================== -->
       <!-- TOOLBAR: Parte Derecha - Menú y botones               -->
       <!-- ===================================================== -->
-      <!-- Menú desplegable -->
-      <mat-menu #appMenu="matMenu">
-        <ng-template matMenuContent>
-          <button mat-menu-item>Ajustes</button>
-          <button mat-menu-item
-                  (click)="openDialogInfo()">Acerca de...</button>
-        </ng-template>
-      </mat-menu>
-      <button mat-icon-button
-              [matMenuTriggerFor]="appMenu">
-        <mat-icon>more_vert</mat-icon>
-      </button>
       <!-- Botón Acerca de... -->
       <span>
         <button mat-icon-button
@@ -49,6 +37,7 @@
           <mat-icon>error_outline</mat-icon>
         </button>
       </span>
+
       <!-- Botón Configuración -->
       <span>
         <button mat-icon-button
@@ -57,6 +46,47 @@
           <mat-icon>settings</mat-icon>
         </button>
       </span>
+
+      <!-- Menú Ayuda -->
+      <mat-menu #appMenuHelp="matMenu"
+                xPosition="before">
+        <ng-template matMenuContent>
+          <button mat-menu-item>
+            <mat-icon>menu_book</mat-icon>Manual de Usuario
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item
+                  (click)="openDialogRemedyInfo()">
+            <mat-icon>headset_mic</mat-icon>Comunicar una Incidencia
+          </button>
+        </ng-template>
+      </mat-menu>
+      <button mat-icon-button
+              matTooltip="Centro de Ayuda"
+              [matMenuTriggerFor]="appMenuHelp">
+        <mat-icon>help_outline</mat-icon>
+      </button>
+
+      <!-- Menú Usuario -->
+      <mat-menu #appMenuUser="matMenu"
+                xPosition="before">
+        <ng-template matMenuContent>
+          <button mat-menu-item>
+            <mat-icon>account_box</mat-icon>Usuario DEMO
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>SALIR
+          </button>
+        </ng-template>
+      </mat-menu>
+      <button mat-icon-button
+              matTooltip="Usuario"
+              [matMenuTriggerFor]="appMenuUser">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+
+
     </mat-toolbar>
   </div>
 </div>

@@ -5,11 +5,13 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { MaterialModule } from '../material.module';
 import { InfoComponent } from './info/info.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { RemedyComponent } from './info/remedy/remedy.component';
 
 @NgModule( {
     declarations: [
         NavigationComponent,
-        InfoComponent
+        InfoComponent,
+        RemedyComponent
     ],
     imports: [
         CommonModule,

@@ -1,0 +1,48 @@
+<!-- ===================================================== -->
+<!-- TITULO DE VENTANA                                     -->
+<!-- ===================================================== -->
+<h1 mat-dialog-title>¿COMO COMUNICAR UNA INCIDENCIA?</h1>
+
+<!-- ===================================================== -->
+<!-- CONTENIDO                                             -->
+<!-- ===================================================== -->
+<mat-dialog-content class="mat-typography">
+    <p>Una incidencia es cualquier suceso inesperado que causa la interrupción o degradación de la calidad del servicio
+        prestado.</p>
+    <p>Podrá comunicarnos su incidencia a través de la <a href="http://incidenciascemi.aytomalaga.intranet/"
+           target="_blank">Consola del Solicitante</a> . Para acceder deberá introducir su usuario y contraseña de red.
+        En el apartado ‘Curso online de la consola del solicitante’ de nuestro menú encontrará disponible un tutorial de
+        ayuda en el uso de la consola.</p>
+    <p>También podrá comunicar una incidencia mediante una llamada al teléfono 29 999, o al 951 929 999 si llama desde
+        un número no perteneciente a la red telefónica municipal.</p>
+    <p>Nuestro de <strong>Servicio al Usuario (CSU)</strong> dispone de un distribuidor automático de
+        llamadas. Si al
+        contactar con nosotros todos los agentes se encontrasen ocupados, el sistema le permitirá elegir entre
+        mantenerse a la espera o dejar un mensaje grabado para que un agente contacte con usted tan pronto como su línea
+        quede libre.</p>
+    <mat-divider class="mt-4 mb-4"></mat-divider>
+    <p>Si tiene alguna incidencia, por favor, comuníquela indicando:</p>
+    <ul>
+        <li>Nombre de la aplicación</li>
+        <li>Versión</li>
+        <li>Versión del S.O: Windows XP, Windows 7, Windows 8</li>
+        <li>Navegador utilizado</li>
+        <li>Texto o imagen del error que se ha producido</li>
+    </ul>
+</mat-dialog-content>
+
+<!-- ===================================================== -->
+<!-- BOTONERA DE ACCIONES                                  -->
+<!-- ===================================================== -->
+<mat-dialog-actions align="end">
+    <button mat-stroked-button
+            mat-dialog-close
+            class="mb-2 mt-4"
+            color="accent">CERRAR</button>
+
+    <button mat-flat-button
+            mat-dialog-close
+            class="mb-2 mt-4"
+            onclick="window.open('http://incidenciascemi.aytomalaga.intranet/','_blank')"
+            color="primary">CONSOLA DEL SOLICITANTE</button>
+</mat-dialog-actions>

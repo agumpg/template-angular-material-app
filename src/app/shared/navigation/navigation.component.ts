@@ -5,11 +5,12 @@ import { map, shareReplay } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatDialog } from '@angular/material/dialog';
 import { InfoComponent } from '../info/info.component';
+import { RemedyComponent } from '../info/remedy/remedy.component';
 
 @Component( {
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styleUrls: [ './navigation.component.scss' ]
+  styleUrls: ['./navigation.component.scss']
 } )
 export class NavigationComponent implements AfterViewInit {
 
@@ -26,7 +27,7 @@ export class NavigationComponent implements AfterViewInit {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    public dialogInfo: MatDialog
+    public dialogWindow: MatDialog
   ) { }
 
   ngAfterViewInit() {
@@ -42,7 +43,7 @@ export class NavigationComponent implements AfterViewInit {
   }
 
 
-  @HostListener( 'window:resize', [ '$event' ] )
+  @HostListener( 'window:resize', ['$event'] )
   onResize( event ) {
     if ( event.target.innerWidth < 768 ) {
       this.sidenav.fixedTopGap = 55;
@@ -63,7 +64,7 @@ export class NavigationComponent implements AfterViewInit {
   }
 
   openDialogInfo() {
-    const dialogReference = this.dialogInfo.open( InfoComponent );
+    const dialogReference = this.dialogWindow.open( InfoComponent );
 
     dialogReference.afterOpened().subscribe( result => {
       console.log( 'Ventana ABIERTA' );
@@ -71,8 +72,20 @@ export class NavigationComponent implements AfterViewInit {
     dialogReference.afterClosed().subscribe( result => {
       console.log( 'Ventana CERRADA' );
     } );
-
   }
+
+  openDialogRemedyInfo() {
+    const dialogReference = this.dialogWindow.open( RemedyComponent );
+
+    dialogReference.afterOpened().subscribe( result => {
+      console.log( 'Ventana ABIERTA' );
+    } );
+    dialogReference.afterClosed().subscribe( result => {
+      console.log( 'Ventana CERRADA' );
+    } );
+  }
+
+
 
 
 }

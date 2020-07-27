@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  APP_TITLE: 'Nombre de Aplicación'
+  APP_TITLE: 'APLICACIÓN PLANTILLA'
 };
 
 /*

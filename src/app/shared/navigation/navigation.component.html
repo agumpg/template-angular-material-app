@@ -16,12 +16,27 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <!-- Logotipo de Aplicación -->
-      <img src="/assets/img/app_logo.png"
+      <!-- <img src="/assets/img/app_logo_light.png"
            class="logo ml-2"
            alt="Logotipo Aplicación">
-
+ -->
       <!-- Titulo de Aplicación -->
-      <span class="lead ml-2 pt-1">{{ appTitle }}</span>
+      <!-- <span class="lead ml-3">{{ appTitle }}</span>  -->
+
+      <span class="text-info font-weight-bold">APP</span>
+      <span class="font-weight-bold text-uppercase">CEMI</span>
+
+
+      <!-- Botones para Opciones de Menú opcionales -->
+      <button mat-button
+              class="ml-5"
+              color="accent">OPCION A</button>
+      <button mat-button
+              class="ml-2"
+              color="accent">OPCION B</button>
+      <button mat-button
+              class="ml-2"
+              color="accent">OPCION C</button>
 
       <!-- Aplicación de clase flex para rellenar espacio y alinear a la derecha -->
       <span class="fill-remaining-space"></span>
@@ -32,7 +47,7 @@
       <!-- Botón Acerca de... -->
       <span>
         <button mat-icon-button
-                matTooltip="Acerca de..."
+                matTooltip="ACERCA DE..."
                 (click)="openDialogInfo()">
           <mat-icon>error_outline</mat-icon>
         </button>
@@ -41,7 +56,7 @@
       <!-- Botón Configuración -->
       <span>
         <button mat-icon-button
-                matTooltip="Menú de configuración"
+                matTooltip="CONFIGURACIÓN"
                 (click)="sidenav_menu_right.toggle()">
           <mat-icon>settings</mat-icon>
         </button>
@@ -62,7 +77,7 @@
         </ng-template>
       </mat-menu>
       <button mat-icon-button
-              matTooltip="Centro de Ayuda"
+              matTooltip="CENTRO DE AYUDA"
               [matMenuTriggerFor]="appMenuHelp">
         <mat-icon>help_outline</mat-icon>
       </button>
@@ -81,7 +96,7 @@
         </ng-template>
       </mat-menu>
       <button mat-icon-button
-              matTooltip="Usuario"
+              matTooltip="INFORMACIÓN DE USUARIO"
               [matMenuTriggerFor]="appMenuUser">
         <mat-icon>account_circle</mat-icon>
       </button>
@@ -109,25 +124,70 @@
         <!-- ===================================================== -->
         <!-- SIDENAV: Izquierdo - Opciones de Menús                -->
         <!-- ===================================================== -->
+
+
+
+
+
         <mat-nav-list>
 
-          <a mat-list-item
-             [routerLink]="['button']"
-             routerLinkActive="active">
-            <mat-icon matListIcon>looks_one</mat-icon>
 
-            <p matLine>Botones</p>
-          </a>
-          <a mat-list-item
-             href="#">
-            <mat-icon matListIcon>looks_two</mat-icon>
-            <p matLine>Enlace 2</p>
-          </a>
-          <a mat-list-item
-             href="#">
-            <mat-icon matListIcon>looks_3</mat-icon>
-            <p matLine>Enlace 3</p>
-          </a>
+          <mat-list dense>
+            <h3 matSubheader>COMPONENTES MATERIAL</h3>
+            <a mat-list-item
+               [routerLink]="['button']"
+               routerLinkActive="active">
+              <p matLine>BOTONES</p>
+            </a>
+            <a mat-list-item
+               href="#">
+              <p matLine>Enlace 2</p>
+            </a>
+
+            <a mat-list-item
+               href="#">
+              <p matLine>Enlace 3</p>
+            </a>
+          </mat-list>
+
+          <mat-divider></mat-divider>
+
+          <mat-list dense>
+            <h3 matSubheader>AGRUPACIÓN DE MENÚ - 1</h3>
+            <a mat-list-item
+               [routerLink]="['button']"
+               routerLinkActive="">
+              <mat-icon matListIcon>looks_one</mat-icon>
+              <p matLine>Opción de Menú A</p>
+            </a>
+            <a mat-list-item
+               [routerLink]="['button']"
+               routerLinkActive="">
+              <mat-icon matListIcon>looks_two</mat-icon>
+              <p matLine>Opción de Menú B</p>
+            </a>
+          </mat-list>
+
+          <mat-divider></mat-divider>
+
+          <mat-list dense>
+            <h3 matSubheader>AGRUPACIÓN DE MENÚ - 2</h3>
+            <a mat-list-item
+               [routerLink]="['button']"
+               routerLinkActive="">
+              <mat-icon matListIcon>wysiwyg</mat-icon>
+              <p matLine>Opción de Menú A</p>
+            </a>
+            <a mat-list-item
+               [routerLink]="['button']"
+               routerLinkActive="">
+              <mat-icon matListIcon>people_alt</mat-icon>
+              <p matLine>Opción de Menú B</p>
+            </a>
+            <mat-divider></mat-divider>
+          </mat-list>
+
+
         </mat-nav-list>
       </mat-sidenav>
 
